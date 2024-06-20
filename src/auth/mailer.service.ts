@@ -7,7 +7,9 @@ export class MailerService {
 
   constructor() {
     this.transporter = nodemailer.createTransport({
-      service: 'gmail',
+      host: 'smtp.gmail.com',
+      port: 587,
+      secure: false,
       auth: {
         user: process.env.EMAIL, // Reemplaza con tu correo
         pass: process.env.APP_EMAIL_PASSWORD, // Reemplaza con tu contraseña de aplicaciones
