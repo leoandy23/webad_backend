@@ -24,6 +24,7 @@ import { ChatModule } from './chat/chat.module';
         const username = configService.get<string>('DB_USERNAME');
         const password = configService.get<string>('DB_PASSWORD');
         const database = configService.get<string>('DB_NAME');
+
         return {
           type: 'postgres',
           host,
