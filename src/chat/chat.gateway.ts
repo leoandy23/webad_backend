@@ -9,6 +9,7 @@ import { Server, Socket } from 'socket.io';
 import { ChatService } from './chat.service';
 
 @WebSocketGateway({
+  namespace: '/chat',
   cors: {
     origin: '*',
   },
